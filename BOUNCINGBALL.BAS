@@ -1,0 +1,13 @@
+10 PRINT CHR$(147)
+20 M = 1024 : MX = 39 : MY = 24
+30 X = 20 : Y = 12
+40 DX = 1 : DY = 1
+50 OX = X : OY = Y
+60 POKE M+40*OY+OX, 32
+70 POKE M+40*Y+X, 81
+80 OX = X : OY = Y
+90 X = X + DX
+100 IF (X = 0) OR (X = MX) THEN DX = -DX
+110 Y = Y + DY
+120 IF (Y = 0) OR (Y = MY) THEN DY = -DY
+130 GOTO 80
